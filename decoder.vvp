@@ -1,0 +1,93 @@
+#! /usr/local/Cellar/icarus-verilog/11.0/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/system.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/va_math.vpi";
+S_0x7fcc79e04450 .scope module, "decoder_3_8_tb" "decoder_3_8_tb" 2 1;
+ .timescale 0 0;
+v0x7fcc79e14bb0_0 .var "E_tb", 0 0;
+v0x7fcc79e14c50_0 .var "In_tb", 2 0;
+v0x7fcc79e14d00_0 .net "Out_tb", 0 0, L_0x7fcc79e15070;  1 drivers
+L_0x7fcc79e15070 .part L_0x7fcc79e14f10, 0, 1;
+S_0x7fcc79e045c0 .scope module, "decoder_1" "decoder" 2 5, 3 1 0, S_0x7fcc79e04450;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "E";
+    .port_info 1 /INPUT 3 "In";
+    .port_info 2 /OUTPUT 8 "Out";
+v0x7fcc79e04780_0 .net "E", 0 0, v0x7fcc79e14bb0_0;  1 drivers
+v0x7fcc79e147c0_0 .net "In", 2 0, v0x7fcc79e14c50_0;  1 drivers
+v0x7fcc79e14870_0 .net "Out", 7 0, L_0x7fcc79e14f10;  1 drivers
+L_0x7fcc79d63008 .functor BUFT 1, C4<00000001>, C4<0>, C4<0>, C4<0>;
+v0x7fcc79e14930_0 .net/2u *"_ivl_0", 7 0, L_0x7fcc79d63008;  1 drivers
+v0x7fcc79e149e0_0 .net *"_ivl_2", 7 0, L_0x7fcc79e14dd0;  1 drivers
+L_0x7fcc79d63050 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0x7fcc79e14ad0_0 .net/2u *"_ivl_4", 7 0, L_0x7fcc79d63050;  1 drivers
+L_0x7fcc79e14dd0 .shift/l 8, L_0x7fcc79d63008, v0x7fcc79e14c50_0;
+L_0x7fcc79e14f10 .functor MUXZ 8, L_0x7fcc79d63050, L_0x7fcc79e14dd0, v0x7fcc79e14bb0_0, C4<>;
+    .scope S_0x7fcc79e04450;
+T_0 ;
+    %delay 0, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fcc79e14bb0_0, 0, 1;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0x7fcc79e14c50_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fcc79e14bb0_0, 0, 1;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v0x7fcc79e14c50_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fcc79e14bb0_0, 0, 1;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0x7fcc79e14c50_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fcc79e14bb0_0, 0, 1;
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v0x7fcc79e14c50_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fcc79e14bb0_0, 0, 1;
+    %pushi/vec4 3, 0, 3;
+    %store/vec4 v0x7fcc79e14c50_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fcc79e14bb0_0, 0, 1;
+    %pushi/vec4 4, 0, 3;
+    %store/vec4 v0x7fcc79e14c50_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fcc79e14bb0_0, 0, 1;
+    %pushi/vec4 5, 0, 3;
+    %store/vec4 v0x7fcc79e14c50_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fcc79e14bb0_0, 0, 1;
+    %pushi/vec4 6, 0, 3;
+    %store/vec4 v0x7fcc79e14c50_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fcc79e14bb0_0, 0, 1;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v0x7fcc79e14c50_0, 0, 3;
+    %delay 10, 0;
+    %vpi_call 2 18 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x7fcc79e04450;
+T_1 ;
+    %vpi_call 2 21 "$dumpfile", "decoder.vcd" {0 0 0};
+    %vpi_call 2 22 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x7fcc79e045c0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "hw_1_tb.v";
+    "hw_1.v";
